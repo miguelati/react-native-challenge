@@ -15,7 +15,7 @@ interface MoneyProps {
 const Money = ({
   style = null,
   amount,
-  currency = 'USD',
+  currency,
   decimalPlaces = 2,
   big = true,
   caption = null,
@@ -40,9 +40,11 @@ const Money = ({
           </Text>
         )}
         {formattedAmount}
-        <Text style={[typos.textSmLeading5Medium, {color: colors.Gray[500]}]}>
-          {` ${currency}`}
-        </Text>
+        {currency && (
+          <Text style={[typos.textSmLeading5Medium, {color: colors.Gray[500]}]}>
+            {` ${currency}`}
+          </Text>
+        )}
       </Text>
     </View>
   );

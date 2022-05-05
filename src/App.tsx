@@ -7,8 +7,7 @@ import {
 } from '@react-navigation/stack';
 import Config from 'react-native-config';
 import ChallengeProvider from '~/config/ChallengeProvider';
-import {ToDoScreen, HomeScreen, ListScreen} from './screens';
-import DetailScreen from './screens/DetailScreen';
+import {ToDoScreen, HomeScreen, ListScreen, DetailScreen} from './screens';
 import WalletScreen from './screens/WalletScreen';
 import {Logo, Chevron} from '~/components/icons';
 import {typos, colors} from '~/theme';

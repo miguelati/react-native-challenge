@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import {Text, View, FlatList, ActivityIndicator} from 'react-native';
-import {getList, GetListResponse} from '~/api/list';
+import {View, FlatList} from 'react-native';
+import {getList, GetListResponse} from '~/api/assets';
 import {ListItem} from '~/components/common';
-import {colors, typos} from '~/theme';
+import {Loading, Error} from '~/components/ui';
 import styles from './styles';
 
 export default function ListScreen() {
@@ -24,18 +24,8 @@ export default function ListScreen() {
 
   return (
     <View style={styles.container}>
-      {error && (
-        <View style={styles.loading}>
-          <Text style={[typos.textBaseLeading6Error, {color: colors.Red[500]}]}>
-            Error
-          </Text>
-        </View>
-      )}
-      {loading && (
-        <View style={styles.loading}>
-          <ActivityIndicator size="large" color={colors.Turquoise[500]} />
-        </View>
-      )}
+      {error && <Error />}
+      {loading && <Loading />}
       {list && list.length > 0 && (
         <FlatList
           data={list}

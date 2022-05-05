@@ -31,3 +31,14 @@ export const getList = async (params?: GetListParams) => {
   };
   return client.get('/assets', {params}).then(onSuccess).catch(onError);
 };
+
+export const getDetail = async (id: string) => {
+  const onSuccess = (response: any) => {
+    const {data} = response;
+    return data;
+  };
+  const onError = (error: Error) => {
+    return Promise.reject(error);
+  };
+  return client.get(`/assets/${id}`).then(onSuccess).catch(onError);
+};

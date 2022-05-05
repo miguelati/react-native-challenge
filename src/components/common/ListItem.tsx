@@ -3,7 +3,7 @@ import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {StackParams} from '~/ts/types';
-import {GetListResponse} from '~/api/list';
+import {GetListResponse} from '~/api/assets';
 import Money from '~/components/ui/Money';
 import Badge from '~/components/ui/Badge';
 import CryptoTitle from '~/components/ui/CryptoTitle';
@@ -26,7 +26,7 @@ const ListItem = ({item}: ListItemProps) => {
             <Ranking rank={item.rank} />
           </View>
           <View style={styles.itemRow}>
-            <Money amount={item.priceUsd} />
+            <Money amount={item.priceUsd} currency="USD" />
             <Badge value={item.changePercent24Hr} />
           </View>
         </View>
