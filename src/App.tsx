@@ -32,7 +32,7 @@ export type StackParams = {
 const Stack = createStackNavigator<StackParams>();
 
 const headerOptions: StackNavigationOptions = {
-  headerTitleStyle: [typos.navTitle, {flex: 1, textAlign: 'center'}],
+  headerTitleStyle: typos.navTitle,
   headerBackTitleStyle: [
     typos.textSmallXs2Regular,
     {color: colors.Turquoise[700]},
@@ -45,7 +45,11 @@ function App() {
     <ChallengeProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="ToDo" component={ToDoScreen} />
+          <Stack.Screen
+            name="ToDo"
+            component={ToDoScreen}
+            options={headerOptions}
+          />
           <Stack.Screen
             name="Home"
             component={HomeScreen}
