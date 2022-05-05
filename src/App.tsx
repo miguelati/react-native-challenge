@@ -5,6 +5,7 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
+import ChallengeProvider from './config/ChallengeProvider';
 import {ToDoScreen, HomeScreen} from './screens';
 import ListScreen from './screens/ListScreen';
 import DetailScreen from './screens/DetailScreen';
@@ -41,32 +42,34 @@ const headerOptions: StackNavigationOptions = {
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="ToDo" component={ToDoScreen} />
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{...headerOptions, headerTitle: () => <Logo />}}
-        />
-        <Stack.Screen
-          name="List"
-          component={ListScreen}
-          options={headerOptions}
-        />
-        <Stack.Screen
-          name="Detail"
-          component={DetailScreen}
-          options={headerOptions}
-        />
-        <Stack.Screen
-          name="Wallet"
-          component={WalletScreen}
-          options={headerOptions}
-        />
-      </Stack.Navigator>
-      <StatusBar />
-    </NavigationContainer>
+    <ChallengeProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="ToDo" component={ToDoScreen} />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{...headerOptions, headerTitle: () => <Logo />}}
+          />
+          <Stack.Screen
+            name="List"
+            component={ListScreen}
+            options={headerOptions}
+          />
+          <Stack.Screen
+            name="Detail"
+            component={DetailScreen}
+            options={headerOptions}
+          />
+          <Stack.Screen
+            name="Wallet"
+            component={WalletScreen}
+            options={headerOptions}
+          />
+        </Stack.Navigator>
+        <StatusBar />
+      </NavigationContainer>
+    </ChallengeProvider>
   );
 }
 

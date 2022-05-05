@@ -3,7 +3,6 @@ import {Text, View} from 'react-native';
 
 import {Login} from '~/components/auth';
 import {typos} from '~/theme';
-import {LoginFormValues} from '~/ts/types';
 import styles from './styles';
 
 /*
@@ -12,7 +11,7 @@ import styles from './styles';
   💯 Handling Sensitive Info and Secure Storage is a great plus
 */
 export default function HomeScreen() {
-  const onSubmit = (data: LoginFormValues) => console.log(data);
+  const onSubmit = () => console.log('success');
 
   return (
     <View style={styles.container}>
