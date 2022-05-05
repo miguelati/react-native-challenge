@@ -1,6 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {StackParams} from '~/App';
 import {Login} from '~/components/auth';
 import {typos} from '~/theme';
 import styles from './styles';
@@ -11,7 +13,8 @@ import styles from './styles';
   💯 Handling Sensitive Info and Secure Storage is a great plus
 */
 export default function HomeScreen() {
-  const onSubmit = () => console.log('success');
+  const {navigate} = useNavigation<StackNavigationProp<StackParams>>();
+  const onSubmit = () => navigate('List');
 
   return (
     <View style={styles.container}>
