@@ -12,6 +12,6 @@ export type StackParams = {
   ToDo: undefined;
   Home: undefined;
   List: undefined;
-  Detail: undefined;
+  Detail: {id: string};
   Wallet: undefined;
 };
