@@ -9,7 +9,7 @@ import {ToDoScreen, HomeScreen} from './screens';
 import ListScreen from './screens/ListScreen';
 import DetailScreen from './screens/DetailScreen';
 import WalletScreen from './screens/WalletScreen';
-import {Logo, Back} from '~/components/ui';
+import {Logo, Back} from '~/components/icons';
 import {typos, colors} from '~/theme';
 
 /**

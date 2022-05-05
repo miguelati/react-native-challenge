@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {useForm} from 'react-hook-form';
-import {Input, Button} from '~/components/ui';
+
+import {Login} from '~/components/auth';
 import {typos} from '~/theme';
 import {LoginFormValues} from '~/ts/types';
 import styles from './styles';
@@ -12,14 +12,6 @@ import styles from './styles';
   💯 Handling Sensitive Info and Secure Storage is a great plus
 */
 export default function HomeScreen() {
-  const {handleSubmit, control} = useForm<LoginFormValues>({
-    defaultValues: {
-      name: '',
-      password: '',
-    },
-    mode: 'onChange',
-  });
-
   const onSubmit = (data: LoginFormValues) => console.log(data);
 
   return (
@@ -27,13 +19,8 @@ export default function HomeScreen() {
       <View style={styles.titleContainer}>
         <Text style={[typos.headingXl2Bold, styles.title]}>Welcome</Text>
       </View>
-
-      <View style={styles.inputContainer}>
-        <Input control={control} rules={{required: true}} name="name" />
-        <Input control={control} rules={{required: true}} name="password" />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button onPress={handleSubmit(onSubmit)}>Sign In</Button>
+      <View style={styles.loginContainer}>
+        <Login onSuccess={onSubmit} />
       </View>
     </View>
   );

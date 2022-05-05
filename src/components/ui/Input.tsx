@@ -23,7 +23,10 @@ const Input = (props: UseControllerProps<LoginFormValues>) => {
       {error && (
         <View style={styles.errorContainer}>
           <Text
-            style={styles.error}>{`* ${name.toUpperCase()} is required`}</Text>
+            style={[
+              typos.textSmallXs3Error,
+              styles.error,
+            ]}>{`* ${name} is required`}</Text>
         </View>
       )}
     </View>
@@ -34,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     height: 42,
     paddingHorizontal: 30,
-    marginBottom: 24,
+    marginBottom: 16,
   },
   input: {
     width: '100%',
@@ -47,7 +50,6 @@ const styles = StyleSheet.create({
   },
   errorContainer: {
     height: 25,
-    marginTop: 5,
   },
   error: {
     color: colors.Red[500],

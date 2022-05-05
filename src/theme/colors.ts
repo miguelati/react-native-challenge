@@ -5,8 +5,12 @@ export default {
   },
   Gray: {
     300: '#D1D5DB',
+    800: '#0A132C',
   },
   Red: {
     500: '#F33A3A',
+  },
+  White: {
+    500: '#FFFFFF',
   },
 };

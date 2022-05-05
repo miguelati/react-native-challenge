@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
   },
+  textSmallXs3Error: {
+    fontFamily: 'Inter',
+    fontSize: 10,
+    fontWeight: '400',
+  },
 });
 
 export default styles;
