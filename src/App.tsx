@@ -12,22 +12,7 @@ import DetailScreen from './screens/DetailScreen';
 import WalletScreen from './screens/WalletScreen';
 import {Logo, Chevron} from '~/components/icons';
 import {typos, colors} from '~/theme';
-
-/**
- * Use `HomeScreen` as the initial route
- * Replace the screen title with the `Logo` component
- *
- * 💯  Usage of TypeScript is a plus
- */
-
-// import Logo from './components/ui/Logo';
-export type StackParams = {
-  ToDo: undefined;
-  Home: undefined;
-  List: undefined;
-  Detail: undefined;
-  Wallet: undefined;
-};
+import {StackParams} from '~/ts/types';
 
 const Stack = createStackNavigator<StackParams>();
 

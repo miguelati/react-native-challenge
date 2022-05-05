@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {StackParams} from '~/App';
+import {StackParams} from '~/ts/types';
 import {Button} from '~/components/ui';
 import {typos} from '~/theme';
 import styles from './styles';
