@@ -8,7 +8,7 @@ import Money from '~/components/ui/Money';
 import Badge from '~/components/ui/Badge';
 import CryptoTitle from '~/components/ui/CryptoTitle';
 import Ranking from '~/components/ui/Ranking';
-import {colors} from '~/theme';
+import {shadows} from '~/theme';
 
 interface ListItemProps {
   item: GetListResponse;
@@ -48,14 +48,7 @@ const styles = StyleSheet.create({
     marginVertical: 6,
     padding: 8,
     borderRadius: 8,
-    shadowColor: colors.Black[500],
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
+    ...shadows[1],
   },
   itemRow: {
     flex: 1,

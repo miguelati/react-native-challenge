@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
   },
+  textSmallXs1Bold: {
+    fontFamily: 'Inter',
+    fontSize: 16,
+    fontWeight: '700',
+  },
   textBaseLeading6: {
     fontFamily: 'Inter',
     fontSize: 16,

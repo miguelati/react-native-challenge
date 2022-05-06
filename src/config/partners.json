@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Whotoc",
+    "url": "https://apps.apple.com/cr/app/whotoc/id1507833902",
+    "comments":
+      "From the scratch. Technologies: Firebase (storage, firestore, auth & functions), Background Geolocation, SendBird Chat, 3rd Party Components"
+  },
+  {
+    "name": "Glewee",
+    "url": "https://apps.apple.com/in/app/glewee-creator-marketplace/id1576275189",
+    "comments":
+      "From the scratch. Technologies: Stripe, Native Base, React Query, 3rd Party Components, Axios"
+  },
+  {
+    "name": "Inviu",
+    "url": "https://apps.apple.com/ar/app/inviu/id1516524838",
+    "comments":
+      "I collaborate in different features, for example: Auth Biometric, Dynamic Links (Firebase) and some Forms. Technologies: Typescript, Firebase, Axios, Redux, 3er Party Components"
+  }
+]

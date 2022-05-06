@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '~/theme';
+import {colors, shadows} from '~/theme';
 
 export default StyleSheet.create({
   container: {
@@ -14,14 +14,7 @@ export default StyleSheet.create({
     paddingVertical: 20,
     marginVertical: 24,
     marginHorizontal: 30,
-    shadowColor: colors.Black[500],
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
+    ...shadows[1],
   },
   row: {
     flex: 1,

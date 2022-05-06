@@ -7,8 +7,13 @@ import {
 } from '@react-navigation/stack';
 import Config from 'react-native-config';
 import ChallengeProvider from '~/config/ChallengeProvider';
-import {ToDoScreen, HomeScreen, ListScreen, DetailScreen} from './screens';
-import WalletScreen from './screens/WalletScreen';
+import {
+  ToDoScreen,
+  HomeScreen,
+  ListScreen,
+  DetailScreen,
+  WalletScreen,
+} from './screens';
 import {Logo, Chevron} from '~/components/icons';
 import {typos, colors} from '~/theme';
 import {StackParams} from '~/ts/types';
@@ -19,6 +24,8 @@ configureClient({
 });
 
 const Stack = createStackNavigator<StackParams>();
+
+const headerTitle = () => <Logo />;
 
 const headerOptions: StackNavigationOptions = {
   headerTitleStyle: typos.navTitle,
@@ -42,7 +49,7 @@ function App() {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{...headerOptions, headerTitle: () => <Logo />}}
+            options={{...headerOptions, headerTitle}}
           />
           <Stack.Screen
             name="List"
