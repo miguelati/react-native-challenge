@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {StackParams} from '~/ts/types';
 import {Login} from '~/components/auth';
-import {typos} from '~/theme';
+import {Title} from '~/components/ui';
 import styles from './styles';
 
 /*
@@ -19,7 +19,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={[typos.headingXl2Bold, styles.title]}>Welcome</Text>
+        <Title text="Welcome" />
       </View>
       <View style={styles.loginContainer}>
         <Login onSuccess={onSubmit} />

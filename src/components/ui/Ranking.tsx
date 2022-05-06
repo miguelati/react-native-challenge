@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ViewStyle} from 'react-native';
+import {View, Text, ViewStyle, StyleSheet} from 'react-native';
 import {typos, colors} from '~/theme';
 
 interface RankingProps {
@@ -10,11 +10,16 @@ interface RankingProps {
 const Ranking = ({style = null, rank}: RankingProps) => {
   return (
     <View style={style}>
-      <Text style={[typos.textSmLeading5Medium, {color: colors.Gray[500]}]}>
-        #{rank}
-      </Text>
+      <Text style={styles.text}>#{rank}</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  text: {
+    ...typos.textSmLeading5Medium,
+    color: colors.Gray[500],
+  },
+});
 
 export default Ranking;

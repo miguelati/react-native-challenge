@@ -13,9 +13,7 @@ const Button = ({style = null, onPress, children}: ButtonProps) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={[styles.container, style]}>
-        <Text style={[typos.textBaseLeading6, styles.buttonText]}>
-          {children}
-        </Text>
+        <Text style={styles.buttonText}>{children}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -32,6 +30,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
   },
   buttonText: {
+    ...typos.textBaseLeading6,
     color: colors.White[500],
   },
 });

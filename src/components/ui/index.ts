@@ -5,3 +5,5 @@ export {default as Badge} from './Badge';
 export {default as CryptoTitle} from './CryptoTitle';
 export {default as Loading} from './Loading';
 export {default as Error} from './Error';
+export {default as Title} from './Title';
+export {default as Subtitle} from './Subtitle';

@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 
 import ChallengeContext from '~/config/ChallengeContext';
+import {Title, Subtitle} from '~/components/ui';
 import {ChallengeContextType} from '~/ts/types';
-import {typos} from '~/theme';
 
 const AccountSection = () => {
   const {userName} = React.useContext(ChallengeContext) as ChallengeContextType;
@@ -13,12 +13,8 @@ const AccountSection = () => {
         style={styles.illustration}
         source={require('~/assets/finish-illustration.png')}
       />
-      <Text style={[typos.headingXl2Bold, styles.title]}>
-        Hello, {userName}
-      </Text>
-      <Text style={typos.textSmallXs2Regular}>
-        Glad you are here,hope to see you soon.
-      </Text>
+      <Title text={`Hello, ${userName}`} style={styles.title} />
+      <Subtitle text="Glad you are here,hope to see you soon." />
     </View>
   );
 };
@@ -36,12 +32,6 @@ const styles = StyleSheet.create({
   illustration: {
     width: 256,
     height: 160,
-  },
-  itemContainer: {
-    display: 'flex',
-    backgroundColor: '#fff',
-    marginVertical: 6,
-    padding: 8,
   },
 });
 

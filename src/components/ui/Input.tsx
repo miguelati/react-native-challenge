@@ -13,7 +13,7 @@ const Input = (props: UseControllerProps<LoginFormValues>) => {
     <View style={styles.container}>
       <TextInput
         ref={ref}
-        style={[typos.textBaseLeading6normal, styles.input]}
+        style={styles.input}
         placeholder={`Enter your ${name}`}
         onBlur={onBlur}
         onChangeText={onChange}
@@ -22,11 +22,7 @@ const Input = (props: UseControllerProps<LoginFormValues>) => {
       />
       {error && (
         <View style={styles.errorContainer}>
-          <Text
-            style={[
-              typos.textSmallXs3Error,
-              styles.error,
-            ]}>{`* ${name} is required`}</Text>
+          <Text style={styles.error}>{`* ${name} is required`}</Text>
         </View>
       )}
     </View>
@@ -40,6 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   input: {
+    ...typos.textBaseLeading6normal,
     width: '100%',
     height: 42,
     borderWidth: 1,
@@ -52,6 +49,7 @@ const styles = StyleSheet.create({
     height: 25,
   },
   error: {
+    ...typos.textSmallXs3Error,
     color: colors.Red[500],
   },
 });

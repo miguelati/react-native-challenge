@@ -9,9 +9,7 @@ interface ErrorProps {
 const Error = ({style = null}: ErrorProps) => {
   return (
     <View style={[styles.container, style]}>
-      <Text style={[typos.textBaseLeading6Error, {color: colors.Red[500]}]}>
-        Error
-      </Text>
+      <Text style={styles.text}>Error</Text>
     </View>
   );
 };
@@ -22,6 +20,10 @@ const styles = StyleSheet.create({
     margin: 8,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    ...typos.textBaseLeading6Error,
+    color: colors.Red[500],
   },
 });
 

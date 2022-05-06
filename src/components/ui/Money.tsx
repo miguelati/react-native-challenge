@@ -26,34 +26,37 @@ const Money = ({
     return formatMoney(roundNumber(amountString, decimalPlaces));
   }, [amount, decimalPlaces]);
   const bigStyle = useMemo(() => {
-    return big
-      ? [typos.text2xlLeading8Semibold, styles.bigText]
-      : [typos.textSmallXs1Regular, styles.smallText];
+    return big ? styles.bigText : styles.smallText;
   }, [big]);
 
   return (
     <View style={style}>
       <Text style={bigStyle}>
-        {caption && (
-          <Text style={[typos.textSmLeading5Medium, styles.caption]}>
-            {`${caption} `}
-          </Text>
-        )}
+        {caption && <Text style={styles.caption}>{`${caption} `}</Text>}
         {formattedAmount}
-        {currency && (
-          <Text style={[typos.textSmLeading5Medium, {color: colors.Gray[500]}]}>
-            {` ${currency}`}
-          </Text>
-        )}
+        {currency && <Text style={styles.currency}>{` ${currency}`}</Text>}
       </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  bigText: {color: colors.Turquoise[700]},
-  smallText: {color: colors.Black[500]},
-  caption: {color: colors.Black[500]},
+  bigText: {
+    ...typos.text2xlLeading8Semibold,
+    color: colors.Turquoise[700],
+  },
+  smallText: {
+    ...typos.textSmallXs1Regular,
+    color: colors.Black[500],
+  },
+  caption: {
+    ...typos.textSmLeading5Medium,
+    color: colors.Black[500],
+  },
+  currency: {
+    ...typos.textSmLeading5Medium,
+    color: colors.Gray[500],
+  },
 });
 
 export default Money;

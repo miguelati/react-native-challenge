@@ -21,7 +21,7 @@ const Badge = ({style = null, value, decimalPlaces = 1}: BadgeProps) => {
 
   return (
     <View style={[processedStyle.container, style]}>
-      <Text style={[typos.textSmLeading5Medium, processedStyle.text]}>
+      <Text style={processedStyle.text}>
         {trend === 'up' ? <ArrowUp /> : <ArrowDown />}
         {` ${formattedValue} %`}
       </Text>
@@ -41,6 +41,7 @@ const styles = (isUp: boolean) => {
       alignItems: 'center',
     },
     text: {
+      ...typos.textSmLeading5Medium,
       color: isUp ? colors.Green[700] : colors.Red[700],
     },
   });

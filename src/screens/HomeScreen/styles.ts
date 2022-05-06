@@ -11,11 +11,6 @@ export default StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 28,
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 12,
-  },
   loginContainer: {
     flex: 3,
   },
